@@ -11,10 +11,11 @@ const routes = [
       import(/* webpackChunkName: "EventList" */ "../views/EventList.vue"),
   },
   {
-    path: "/event",
+    path: "/event/:id",
     name: "event-show",
     component: () =>
       import(/* webpackChunkName: "EventShow" */ "../views/EventShow.vue"),
+    props: true,
   },
   {
     path: "/create-event",
