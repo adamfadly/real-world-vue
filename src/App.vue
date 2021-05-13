@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">EventList</router-link> |
-      <router-link :to="{ name: 'create-event' }">CreateEvent</router-link>
+      <nav-bar></nav-bar>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+export default {
+  components: {
+    NavBar,
+  },
+};
+</script>
 
 <style>
 #app {
