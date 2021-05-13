@@ -4,4 +4,10 @@ export interface Event {
   date: string;
   title: string;
   attendees: number;
+  venue: Venue;
+}
+
+export interface Venue {
+  country: string;
+  capacity: number;
 }

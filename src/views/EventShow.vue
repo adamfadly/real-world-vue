@@ -11,6 +11,6 @@ import { Component, Prop, Vue } from "vue-property-decorator";
   components: {},
 })
 export default class EventShow extends Vue {
-  @Prop(Number) readonly id: number | undefined;
+  @Prop() readonly id: number | undefined;
 }
 </script>

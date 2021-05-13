@@ -1,12 +1,24 @@
 <template>
-  <div>
-    <router-link :to="{ name: 'event-show', params: { id: event.id } }">
-      <div class="w-2/4 bg-gray-100 border-2 rounded border-gray-300 shadow-lg">
+  <div class="mb-3">
+    <router-link :to="{ name: 'event-show', params: { id: event.title } }">
+      <div
+        class="
+          w-1/2
+          bg-gray-100
+          border-2
+          rounded
+          border-gray-300
+          shadow-lg
+          h-48
+        "
+      >
         <span>@{{ event.time }} on {{ event.date }}</span>
         <div class="text-2xl">
           <h4>Title: {{ event.title }}</h4>
         </div>
-        <span>{{ event.attendees }}</span>
+        <span>Attaendees: {{ event.attendees }}</span> <br />
+        <span>Country:{{ event.venue.country }}</span> <br />
+        <span>Capacity:{{ event.venue.capacity }}</span>
       </div>
     </router-link>
   </div>
@@ -14,10 +26,10 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { Event } from "@/shared";
+import { Event } from "@/models";
 @Component
 export default class EventCard extends Vue {
-  @Prop(Object) readonly event!: Event;
+  @Prop() readonly event!: Event;
 }
 </script>
 

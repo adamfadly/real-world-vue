@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-col justify-items-center items-center px-48">
     <event-card
       v-for="event in events"
       :key="event.id"
@@ -11,7 +11,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import EventCard from "@/components/EventCard.vue";
-import { Event } from "@/shared";
+import { Event } from "@/models";
 
 @Component({
   components: {
@@ -26,6 +26,10 @@ export default class EventList extends Vue {
       attendees: 9,
       time: "7:00",
       title: "Vue js meet up",
+      venue: {
+        country: "Indonesia",
+        capacity: 100,
+      },
     },
     {
       id: 13,
@@ -33,6 +37,10 @@ export default class EventList extends Vue {
       attendees: 70,
       time: "18:00",
       title: "Cimol Fans meet up",
+      venue: {
+        country: "Thailand",
+        capacity: 3000,
+      },
     },
   ];
 }
