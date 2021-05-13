@@ -3,7 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
+import Button from "@/components/global/Button.vue";
 
+Vue.component("Button", Button);
 Vue.config.productionTip = false;
 
 new Vue({

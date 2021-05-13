@@ -1,10 +1,8 @@
 <template>
   <div class="flex-col justify-items-center items-center px-48">
-    <event-card
-      v-for="event in events"
-      :key="event.id"
-      :event="event"
-    ></event-card>
+    <event-card v-for="event in events" :key="event.id" :event="event">
+      <Button label="Yolo" />
+    </event-card>
   </div>
 </template>
 

@@ -1,16 +1,8 @@
 <template>
-  <div class="mb-3">
+  <div class="mb-3 flex justify-center">
     <router-link :to="{ name: 'event-show', params: { id: event.title } }">
       <div
-        class="
-          w-1/2
-          bg-gray-100
-          border-2
-          rounded
-          border-gray-300
-          shadow-lg
-          h-48
-        "
+        class="px-6 py-4 bg-gray-100 border-2 rounded border-gray-300 shadow-lg"
       >
         <span>@{{ event.time }} on {{ event.date }}</span>
         <div class="text-2xl">
@@ -19,6 +11,7 @@
         <span>Attaendees: {{ event.attendees }}</span> <br />
         <span>Country:{{ event.venue.country }}</span> <br />
         <span>Capacity:{{ event.venue.capacity }}</span>
+        <slot></slot>
       </div>
     </router-link>
   </div>
